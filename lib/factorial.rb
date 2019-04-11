@@ -3,16 +3,14 @@
 # Space complexity: Constant/O(1), to account for the values of the integers
 
 def factorial(number)
-  value = 1
+  factorial = 1
   
-  if number != nil
+  if number == nil
+    raise ArgumentError, "nil object is not an integer"
+  else
     while number > 0
-      value *= number
+      factorial *= number
       number -= 1
     end
-
-    return value
-  else
-    raise ArgumentError, "nil object is not an integer"
   end
 end
